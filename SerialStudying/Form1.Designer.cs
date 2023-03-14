@@ -29,6 +29,7 @@ namespace SerialStudying
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cBoxComport = new System.Windows.Forms.ComboBox();
             this.cBoxBaudRate = new System.Windows.Forms.ComboBox();
@@ -44,8 +45,9 @@ namespace SerialStudying
             this.btnOpen = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnSendData = new System.Windows.Forms.Button();
+            this.tBox = new System.Windows.Forms.TextBox();
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -80,34 +82,53 @@ namespace SerialStudying
             // cBoxBaudRate
             // 
             this.cBoxBaudRate.FormattingEnabled = true;
+            this.cBoxBaudRate.Items.AddRange(new object[] {
+            "2400",
+            "4800",
+            "9600"});
             this.cBoxBaudRate.Location = new System.Drawing.Point(89, 52);
             this.cBoxBaudRate.Name = "cBoxBaudRate";
             this.cBoxBaudRate.Size = new System.Drawing.Size(121, 20);
             this.cBoxBaudRate.TabIndex = 1;
+            this.cBoxBaudRate.Text = "9600";
             // 
             // cBoxStopBits
             // 
             this.cBoxStopBits.FormattingEnabled = true;
+            this.cBoxStopBits.Items.AddRange(new object[] {
+            "One",
+            "Two"});
             this.cBoxStopBits.Location = new System.Drawing.Point(89, 105);
             this.cBoxStopBits.Name = "cBoxStopBits";
             this.cBoxStopBits.Size = new System.Drawing.Size(121, 20);
             this.cBoxStopBits.TabIndex = 2;
+            this.cBoxStopBits.Text = "One";
             // 
             // cBoxParityBits
             // 
             this.cBoxParityBits.FormattingEnabled = true;
+            this.cBoxParityBits.Items.AddRange(new object[] {
+            "None",
+            "Odd",
+            "Even"});
             this.cBoxParityBits.Location = new System.Drawing.Point(89, 131);
             this.cBoxParityBits.Name = "cBoxParityBits";
             this.cBoxParityBits.Size = new System.Drawing.Size(121, 20);
             this.cBoxParityBits.TabIndex = 3;
+            this.cBoxParityBits.Text = "None";
             // 
             // cBoxDataBits
             // 
             this.cBoxDataBits.FormattingEnabled = true;
+            this.cBoxDataBits.Items.AddRange(new object[] {
+            "6",
+            "7",
+            "8"});
             this.cBoxDataBits.Location = new System.Drawing.Point(89, 78);
             this.cBoxDataBits.Name = "cBoxDataBits";
             this.cBoxDataBits.Size = new System.Drawing.Size(121, 20);
             this.cBoxDataBits.TabIndex = 4;
+            this.cBoxDataBits.Text = "8";
             // 
             // label1
             // 
@@ -173,6 +194,7 @@ namespace SerialStudying
             this.btnOpen.TabIndex = 0;
             this.btnOpen.Text = "Open";
             this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
             // btnClose
             // 
@@ -182,6 +204,7 @@ namespace SerialStudying
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // progressBar1
             // 
@@ -189,36 +212,38 @@ namespace SerialStudying
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(122, 23);
             this.progressBar1.TabIndex = 2;
+            this.progressBar1.Click += new System.EventHandler(this.btnSendBar_Click);
             // 
-            // button3
+            // btnSendData
             // 
-            this.button3.Location = new System.Drawing.Point(176, 188);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(63, 89);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Send Data";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSendData.Location = new System.Drawing.Point(176, 188);
+            this.btnSendData.Name = "btnSendData";
+            this.btnSendData.Size = new System.Drawing.Size(63, 89);
+            this.btnSendData.TabIndex = 2;
+            this.btnSendData.Text = "Send Data";
+            this.btnSendData.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // tBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(245, 12);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(237, 265);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tBox.Location = new System.Drawing.Point(245, 12);
+            this.tBox.Multiline = true;
+            this.tBox.Name = "tBox";
+            this.tBox.Size = new System.Drawing.Size(237, 265);
+            this.tBox.TabIndex = 3;
+            this.tBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(497, 292);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.tBox);
+            this.Controls.Add(this.btnSendData);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -244,8 +269,9 @@ namespace SerialStudying
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnOpen;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnSendData;
+        private System.Windows.Forms.TextBox tBox;
+        private System.IO.Ports.SerialPort serialPort1;
     }
 }
 
