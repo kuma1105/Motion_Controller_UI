@@ -1,0 +1,10 @@
+D:\SerialStudying\SerialStudying\bin\Debug\SerialStudying.exe.config
+D:\SerialStudying\SerialStudying\bin\Debug\SerialStudying.exe
+D:\SerialStudying\SerialStudying\bin\Debug\SerialStudying.pdb
+D:\SerialStudying\SerialStudying\obj\Debug\SerialStudying.csproj.AssemblyReference.cache
+D:\SerialStudying\SerialStudying\obj\Debug\SerialStudying.Form1.resources
+D:\SerialStudying\SerialStudying\obj\Debug\SerialStudying.Properties.Resources.resources
+D:\SerialStudying\SerialStudying\obj\Debug\SerialStudying.csproj.GenerateResource.cache
+D:\SerialStudying\SerialStudying\obj\Debug\SerialStudying.csproj.CoreCompileInputs.cache
+D:\SerialStudying\SerialStudying\obj\Debug\SerialStudying.exe
+D:\SerialStudying\SerialStudying\obj\Debug\SerialStudying.pdb
