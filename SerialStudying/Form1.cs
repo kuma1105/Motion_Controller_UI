@@ -14,6 +14,7 @@ namespace SerialStudying
 {
     public partial class Form1 : Form
     {
+        string dataOUT;
         public Form1()
         {
             InitializeComponent();
@@ -65,6 +66,21 @@ namespace SerialStudying
             {
                 serialPort1.Close();
                 progressBar1.Value = 0;
+            }
+        }
+
+        private void cBoxComport_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSendData_Click(object sender, EventArgs e)
+        {
+            if (serialPort1.IsOpen)
+            {
+                dataOUT = tBoxDataOut.Text;
+                //serialPort1.WriteLine(dataOUT); // 엔터 키 값이 포함되어 있다.
+                serialPort1.Write(dataOUT); // 엔터 키 값이 포함되어 있다.
             }
         }
     }
