@@ -31,8 +31,6 @@ namespace SerialStudying
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.chBoxRTSEnable = new System.Windows.Forms.CheckBox();
-            this.chBoxDTREnable = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,22 +51,9 @@ namespace SerialStudying
             this.tBoxDataOut = new System.Windows.Forms.TextBox();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.lblDataOutLength = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.chBoxWrite = new System.Windows.Forms.CheckBox();
-            this.chBoxWriteLine = new System.Windows.Forms.CheckBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.chBoxUsingEnter = new System.Windows.Forms.CheckBox();
-            this.chBoxUsingButton = new System.Windows.Forms.CheckBox();
-            this.btnClearDataOut = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.chBoxRTSEnable_2 = new System.Windows.Forms.CheckBox();
-            this.chBoxDTREnable_2 = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -80,17 +65,6 @@ namespace SerialStudying
             this.cBoxBaudRate_2 = new System.Windows.Forms.ComboBox();
             this.cBoxComport_2 = new System.Windows.Forms.ComboBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.lblDataOutLength_2 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.chBoxWrite_2 = new System.Windows.Forms.CheckBox();
-            this.chBoxWriteLine_2 = new System.Windows.Forms.CheckBox();
-            this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.chBoxUsingEnter_2 = new System.Windows.Forms.CheckBox();
-            this.chBoxUsingButton_2 = new System.Windows.Forms.CheckBox();
-            this.btnClearDataOut_2 = new System.Windows.Forms.Button();
             this.btnSendData_2 = new System.Windows.Forms.Button();
             this.tBoxDataOut_2 = new System.Windows.Forms.TextBox();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
@@ -104,26 +78,16 @@ namespace SerialStudying
             this.groupBox2.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox12.SuspendLayout();
-            this.groupBox13.SuspendLayout();
-            this.groupBox14.SuspendLayout();
-            this.groupBox15.SuspendLayout();
-            this.groupBox16.SuspendLayout();
             this.groupBox17.SuspendLayout();
             this.groupBox18.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.chBoxRTSEnable);
-            this.groupBox1.Controls.Add(this.chBoxDTREnable);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -136,34 +100,10 @@ namespace SerialStudying
             this.groupBox1.Controls.Add(this.cBoxComport);
             this.groupBox1.Location = new System.Drawing.Point(6, 20);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(227, 191);
+            this.groupBox1.Size = new System.Drawing.Size(227, 162);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "COM Port Control";
-            // 
-            // chBoxRTSEnable
-            // 
-            this.chBoxRTSEnable.AutoSize = true;
-            this.chBoxRTSEnable.Font = new System.Drawing.Font("굴림", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.chBoxRTSEnable.Location = new System.Drawing.Point(121, 166);
-            this.chBoxRTSEnable.Name = "chBoxRTSEnable";
-            this.chBoxRTSEnable.Size = new System.Drawing.Size(100, 16);
-            this.chBoxRTSEnable.TabIndex = 11;
-            this.chBoxRTSEnable.Text = "RTS ENABLE";
-            this.chBoxRTSEnable.UseVisualStyleBackColor = true;
-            this.chBoxRTSEnable.CheckedChanged += new System.EventHandler(this.chBoxRTSEnable_CheckedChanged);
-            // 
-            // chBoxDTREnable
-            // 
-            this.chBoxDTREnable.AutoSize = true;
-            this.chBoxDTREnable.Font = new System.Drawing.Font("굴림", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.chBoxDTREnable.Location = new System.Drawing.Point(18, 166);
-            this.chBoxDTREnable.Name = "chBoxDTREnable";
-            this.chBoxDTREnable.Size = new System.Drawing.Size(100, 16);
-            this.chBoxDTREnable.TabIndex = 10;
-            this.chBoxDTREnable.Text = "DTR ENABLE";
-            this.chBoxDTREnable.UseVisualStyleBackColor = true;
-            this.chBoxDTREnable.CheckedChanged += new System.EventHandler(this.chBoxDTREnable_CheckedChanged);
             // 
             // label5
             // 
@@ -281,27 +221,27 @@ namespace SerialStudying
             this.groupBox2.Controls.Add(this.progressBar1);
             this.groupBox2.Controls.Add(this.btnClose);
             this.groupBox2.Controls.Add(this.btnOpen);
-            this.groupBox2.Location = new System.Drawing.Point(6, 217);
+            this.groupBox2.Location = new System.Drawing.Point(239, 20);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(227, 197);
+            this.groupBox2.Size = new System.Drawing.Size(192, 162);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "COM Port Status";
             // 
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.lblStatusCom);
             this.groupBox8.Location = new System.Drawing.Point(81, 20);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(140, 132);
+            this.groupBox8.Size = new System.Drawing.Size(103, 105);
             this.groupBox8.TabIndex = 5;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "COM PORT STATUS";
             // 
             // lblStatusCom
             // 
             this.lblStatusCom.AutoSize = true;
             this.lblStatusCom.Font = new System.Drawing.Font("Britannic Bold", 18F);
-            this.lblStatusCom.Location = new System.Drawing.Point(45, 56);
+            this.lblStatusCom.Location = new System.Drawing.Point(26, 42);
             this.lblStatusCom.Name = "lblStatusCom";
             this.lblStatusCom.Size = new System.Drawing.Size(52, 27);
             this.lblStatusCom.TabIndex = 3;
@@ -309,16 +249,16 @@ namespace SerialStudying
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(6, 168);
+            this.progressBar1.Location = new System.Drawing.Point(6, 131);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(215, 23);
+            this.progressBar1.Size = new System.Drawing.Size(178, 20);
             this.progressBar1.TabIndex = 2;
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(6, 91);
+            this.btnClose.Location = new System.Drawing.Point(6, 78);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(69, 61);
+            this.btnClose.Size = new System.Drawing.Size(69, 47);
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -326,9 +266,9 @@ namespace SerialStudying
             // 
             // btnOpen
             // 
-            this.btnOpen.Location = new System.Drawing.Point(6, 20);
+            this.btnOpen.Location = new System.Drawing.Point(6, 26);
             this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(69, 61);
+            this.btnOpen.Size = new System.Drawing.Size(69, 46);
             this.btnOpen.TabIndex = 0;
             this.btnOpen.Text = "Open";
             this.btnOpen.UseVisualStyleBackColor = true;
@@ -336,151 +276,34 @@ namespace SerialStudying
             // 
             // btnSendData
             // 
-            this.btnSendData.Location = new System.Drawing.Point(6, 20);
+            this.btnSendData.Location = new System.Drawing.Point(347, 21);
             this.btnSendData.Name = "btnSendData";
-            this.btnSendData.Size = new System.Drawing.Size(104, 39);
+            this.btnSendData.Size = new System.Drawing.Size(70, 20);
             this.btnSendData.TabIndex = 2;
-            this.btnSendData.Text = "Send Data";
+            this.btnSendData.Text = "Send";
             this.btnSendData.UseVisualStyleBackColor = true;
             this.btnSendData.Click += new System.EventHandler(this.btnSendData_Click);
             // 
             // tBoxDataOut
             // 
-            this.tBoxDataOut.Location = new System.Drawing.Point(6, 20);
+            this.tBoxDataOut.Location = new System.Drawing.Point(6, 21);
             this.tBoxDataOut.Multiline = true;
             this.tBoxDataOut.Name = "tBoxDataOut";
-            this.tBoxDataOut.Size = new System.Drawing.Size(372, 171);
+            this.tBoxDataOut.Size = new System.Drawing.Size(335, 20);
             this.tBoxDataOut.TabIndex = 3;
-            this.tBoxDataOut.TextChanged += new System.EventHandler(this.tBoxDataOut_TextChanged);
-            this.tBoxDataOut.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tBoxDataOut_KeyDown);
+            //this.tBoxDataOut.TextChanged += new System.EventHandler(this.tBoxDataOut_TextChanged);
+            //this.tBoxDataOut.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tBoxDataOut_KeyDown);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.groupBox7);
-            this.groupBox3.Controls.Add(this.groupBox4);
+            this.groupBox3.Controls.Add(this.btnSendData);
             this.groupBox3.Controls.Add(this.tBoxDataOut);
-            this.groupBox3.Location = new System.Drawing.Point(239, 20);
+            this.groupBox3.Location = new System.Drawing.Point(6, 188);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(387, 394);
+            this.groupBox3.Size = new System.Drawing.Size(425, 54);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Transmitter Control";
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.lblDataOutLength);
-            this.groupBox7.Controls.Add(this.label6);
-            this.groupBox7.Location = new System.Drawing.Point(6, 317);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(372, 71);
-            this.groupBox7.TabIndex = 6;
-            this.groupBox7.TabStop = false;
-            // 
-            // lblDataOutLength
-            // 
-            this.lblDataOutLength.AutoSize = true;
-            this.lblDataOutLength.Font = new System.Drawing.Font("굴림", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblDataOutLength.Location = new System.Drawing.Point(241, 35);
-            this.lblDataOutLength.Name = "lblDataOutLength";
-            this.lblDataOutLength.Size = new System.Drawing.Size(23, 14);
-            this.lblDataOutLength.TabIndex = 6;
-            this.lblDataOutLength.Text = "00";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("굴림", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.Location = new System.Drawing.Point(113, 35);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 14);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Data OUT Length : ";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.groupBox6);
-            this.groupBox4.Controls.Add(this.groupBox5);
-            this.groupBox4.Controls.Add(this.btnClearDataOut);
-            this.groupBox4.Controls.Add(this.btnSendData);
-            this.groupBox4.Location = new System.Drawing.Point(6, 197);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(372, 114);
-            this.groupBox4.TabIndex = 5;
-            this.groupBox4.TabStop = false;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.chBoxWrite);
-            this.groupBox6.Controls.Add(this.chBoxWriteLine);
-            this.groupBox6.Location = new System.Drawing.Point(229, 20);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(107, 74);
-            this.groupBox6.TabIndex = 6;
-            this.groupBox6.TabStop = false;
-            // 
-            // chBoxWrite
-            // 
-            this.chBoxWrite.AutoSize = true;
-            this.chBoxWrite.Location = new System.Drawing.Point(6, 45);
-            this.chBoxWrite.Name = "chBoxWrite";
-            this.chBoxWrite.Size = new System.Drawing.Size(51, 16);
-            this.chBoxWrite.TabIndex = 0;
-            this.chBoxWrite.Text = "Write";
-            this.chBoxWrite.UseVisualStyleBackColor = true;
-            this.chBoxWrite.CheckedChanged += new System.EventHandler(this.chBoxWrite_CheckedChanged);
-            // 
-            // chBoxWriteLine
-            // 
-            this.chBoxWriteLine.AutoSize = true;
-            this.chBoxWriteLine.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.chBoxWriteLine.Location = new System.Drawing.Point(6, 20);
-            this.chBoxWriteLine.Name = "chBoxWriteLine";
-            this.chBoxWriteLine.Size = new System.Drawing.Size(81, 17);
-            this.chBoxWriteLine.TabIndex = 0;
-            this.chBoxWriteLine.Text = "WriteLine";
-            this.chBoxWriteLine.UseVisualStyleBackColor = true;
-            this.chBoxWriteLine.CheckedChanged += new System.EventHandler(this.chBoxWriteLine_CheckedChanged);
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.chBoxUsingEnter);
-            this.groupBox5.Controls.Add(this.chBoxUsingButton);
-            this.groupBox5.Location = new System.Drawing.Point(116, 20);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(107, 74);
-            this.groupBox5.TabIndex = 5;
-            this.groupBox5.TabStop = false;
-            // 
-            // chBoxUsingEnter
-            // 
-            this.chBoxUsingEnter.AutoSize = true;
-            this.chBoxUsingEnter.Location = new System.Drawing.Point(6, 45);
-            this.chBoxUsingEnter.Name = "chBoxUsingEnter";
-            this.chBoxUsingEnter.Size = new System.Drawing.Size(89, 16);
-            this.chBoxUsingEnter.TabIndex = 0;
-            this.chBoxUsingEnter.Text = "Using Enter";
-            this.chBoxUsingEnter.UseVisualStyleBackColor = true;
-            // 
-            // chBoxUsingButton
-            // 
-            this.chBoxUsingButton.AutoSize = true;
-            this.chBoxUsingButton.Location = new System.Drawing.Point(6, 20);
-            this.chBoxUsingButton.Name = "chBoxUsingButton";
-            this.chBoxUsingButton.Size = new System.Drawing.Size(95, 16);
-            this.chBoxUsingButton.TabIndex = 0;
-            this.chBoxUsingButton.Text = "Using Button";
-            this.chBoxUsingButton.UseVisualStyleBackColor = true;
-            this.chBoxUsingButton.CheckedChanged += new System.EventHandler(this.chBoxUsingButton_CheckedChanged);
-            // 
-            // btnClearDataOut
-            // 
-            this.btnClearDataOut.Location = new System.Drawing.Point(6, 64);
-            this.btnClearDataOut.Name = "btnClearDataOut";
-            this.btnClearDataOut.Size = new System.Drawing.Size(104, 39);
-            this.btnClearDataOut.TabIndex = 4;
-            this.btnClearDataOut.Text = "Clear Data Out";
-            this.btnClearDataOut.UseVisualStyleBackColor = true;
-            this.btnClearDataOut.Click += new System.EventHandler(this.btnClearDataOut_Click);
+            this.groupBox3.Text = "Send Data";
             // 
             // groupBox9
             // 
@@ -489,7 +312,7 @@ namespace SerialStudying
             this.groupBox9.Controls.Add(this.groupBox2);
             this.groupBox9.Location = new System.Drawing.Point(12, 12);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(639, 426);
+            this.groupBox9.Size = new System.Drawing.Size(439, 249);
             this.groupBox9.TabIndex = 5;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "1";
@@ -499,17 +322,15 @@ namespace SerialStudying
             this.groupBox10.Controls.Add(this.groupBox11);
             this.groupBox10.Controls.Add(this.groupBox12);
             this.groupBox10.Controls.Add(this.groupBox17);
-            this.groupBox10.Location = new System.Drawing.Point(657, 12);
+            this.groupBox10.Location = new System.Drawing.Point(12, 267);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(639, 426);
+            this.groupBox10.Size = new System.Drawing.Size(439, 250);
             this.groupBox10.TabIndex = 5;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "2";
             // 
             // groupBox11
             // 
-            this.groupBox11.Controls.Add(this.chBoxRTSEnable_2);
-            this.groupBox11.Controls.Add(this.chBoxDTREnable_2);
             this.groupBox11.Controls.Add(this.label7);
             this.groupBox11.Controls.Add(this.label8);
             this.groupBox11.Controls.Add(this.label9);
@@ -522,34 +343,10 @@ namespace SerialStudying
             this.groupBox11.Controls.Add(this.cBoxComport_2);
             this.groupBox11.Location = new System.Drawing.Point(6, 20);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(227, 191);
+            this.groupBox11.Size = new System.Drawing.Size(227, 162);
             this.groupBox11.TabIndex = 0;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "COM Port Control";
-            // 
-            // chBoxRTSEnable_2
-            // 
-            this.chBoxRTSEnable_2.AutoSize = true;
-            this.chBoxRTSEnable_2.Font = new System.Drawing.Font("굴림", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.chBoxRTSEnable_2.Location = new System.Drawing.Point(121, 166);
-            this.chBoxRTSEnable_2.Name = "chBoxRTSEnable_2";
-            this.chBoxRTSEnable_2.Size = new System.Drawing.Size(100, 16);
-            this.chBoxRTSEnable_2.TabIndex = 11;
-            this.chBoxRTSEnable_2.Text = "RTS ENABLE";
-            this.chBoxRTSEnable_2.UseVisualStyleBackColor = true;
-            this.chBoxRTSEnable_2.CheckedChanged += new System.EventHandler(this.chBoxRTSEnable_2_CheckedChanged);
-            // 
-            // chBoxDTREnable_2
-            // 
-            this.chBoxDTREnable_2.AutoSize = true;
-            this.chBoxDTREnable_2.Font = new System.Drawing.Font("굴림", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.chBoxDTREnable_2.Location = new System.Drawing.Point(18, 166);
-            this.chBoxDTREnable_2.Name = "chBoxDTREnable_2";
-            this.chBoxDTREnable_2.Size = new System.Drawing.Size(100, 16);
-            this.chBoxDTREnable_2.TabIndex = 10;
-            this.chBoxDTREnable_2.Text = "DTR ENABLE";
-            this.chBoxDTREnable_2.UseVisualStyleBackColor = true;
-            this.chBoxDTREnable_2.CheckedChanged += new System.EventHandler(this.chBoxDTREnable_2_CheckedChanged);
             // 
             // label7
             // 
@@ -663,151 +460,34 @@ namespace SerialStudying
             // 
             // groupBox12
             // 
-            this.groupBox12.Controls.Add(this.groupBox13);
-            this.groupBox12.Controls.Add(this.groupBox14);
+            this.groupBox12.Controls.Add(this.btnSendData_2);
             this.groupBox12.Controls.Add(this.tBoxDataOut_2);
-            this.groupBox12.Location = new System.Drawing.Point(239, 20);
+            this.groupBox12.Location = new System.Drawing.Point(6, 188);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(387, 394);
+            this.groupBox12.Size = new System.Drawing.Size(425, 54);
             this.groupBox12.TabIndex = 4;
             this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "Transmitter Control";
-            // 
-            // groupBox13
-            // 
-            this.groupBox13.Controls.Add(this.lblDataOutLength_2);
-            this.groupBox13.Controls.Add(this.label13);
-            this.groupBox13.Location = new System.Drawing.Point(6, 317);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(372, 71);
-            this.groupBox13.TabIndex = 6;
-            this.groupBox13.TabStop = false;
-            // 
-            // lblDataOutLength_2
-            // 
-            this.lblDataOutLength_2.AutoSize = true;
-            this.lblDataOutLength_2.Font = new System.Drawing.Font("굴림", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblDataOutLength_2.Location = new System.Drawing.Point(241, 35);
-            this.lblDataOutLength_2.Name = "lblDataOutLength_2";
-            this.lblDataOutLength_2.Size = new System.Drawing.Size(23, 14);
-            this.lblDataOutLength_2.TabIndex = 6;
-            this.lblDataOutLength_2.Text = "00";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("굴림", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label13.Location = new System.Drawing.Point(113, 35);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(136, 14);
-            this.label13.TabIndex = 5;
-            this.label13.Text = "Data OUT Length : ";
-            // 
-            // groupBox14
-            // 
-            this.groupBox14.Controls.Add(this.groupBox15);
-            this.groupBox14.Controls.Add(this.groupBox16);
-            this.groupBox14.Controls.Add(this.btnClearDataOut_2);
-            this.groupBox14.Controls.Add(this.btnSendData_2);
-            this.groupBox14.Location = new System.Drawing.Point(6, 197);
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(372, 114);
-            this.groupBox14.TabIndex = 5;
-            this.groupBox14.TabStop = false;
-            // 
-            // groupBox15
-            // 
-            this.groupBox15.Controls.Add(this.chBoxWrite_2);
-            this.groupBox15.Controls.Add(this.chBoxWriteLine_2);
-            this.groupBox15.Location = new System.Drawing.Point(229, 20);
-            this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(107, 74);
-            this.groupBox15.TabIndex = 6;
-            this.groupBox15.TabStop = false;
-            // 
-            // chBoxWrite_2
-            // 
-            this.chBoxWrite_2.AutoSize = true;
-            this.chBoxWrite_2.Location = new System.Drawing.Point(6, 45);
-            this.chBoxWrite_2.Name = "chBoxWrite_2";
-            this.chBoxWrite_2.Size = new System.Drawing.Size(51, 16);
-            this.chBoxWrite_2.TabIndex = 0;
-            this.chBoxWrite_2.Text = "Write";
-            this.chBoxWrite_2.UseVisualStyleBackColor = true;
-            this.chBoxWrite_2.CheckedChanged += new System.EventHandler(this.chBoxWrite_2_CheckedChanged);
-            // 
-            // chBoxWriteLine_2
-            // 
-            this.chBoxWriteLine_2.AutoSize = true;
-            this.chBoxWriteLine_2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.chBoxWriteLine_2.Location = new System.Drawing.Point(6, 20);
-            this.chBoxWriteLine_2.Name = "chBoxWriteLine_2";
-            this.chBoxWriteLine_2.Size = new System.Drawing.Size(81, 17);
-            this.chBoxWriteLine_2.TabIndex = 0;
-            this.chBoxWriteLine_2.Text = "WriteLine";
-            this.chBoxWriteLine_2.UseVisualStyleBackColor = true;
-            this.chBoxWriteLine_2.CheckedChanged += new System.EventHandler(this.chBoxWriteLine_2_CheckedChanged);
-            // 
-            // groupBox16
-            // 
-            this.groupBox16.Controls.Add(this.chBoxUsingEnter_2);
-            this.groupBox16.Controls.Add(this.chBoxUsingButton_2);
-            this.groupBox16.Location = new System.Drawing.Point(116, 20);
-            this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(107, 74);
-            this.groupBox16.TabIndex = 5;
-            this.groupBox16.TabStop = false;
-            // 
-            // chBoxUsingEnter_2
-            // 
-            this.chBoxUsingEnter_2.AutoSize = true;
-            this.chBoxUsingEnter_2.Location = new System.Drawing.Point(6, 45);
-            this.chBoxUsingEnter_2.Name = "chBoxUsingEnter_2";
-            this.chBoxUsingEnter_2.Size = new System.Drawing.Size(89, 16);
-            this.chBoxUsingEnter_2.TabIndex = 0;
-            this.chBoxUsingEnter_2.Text = "Using Enter";
-            this.chBoxUsingEnter_2.UseVisualStyleBackColor = true;
-            // 
-            // chBoxUsingButton_2
-            // 
-            this.chBoxUsingButton_2.AutoSize = true;
-            this.chBoxUsingButton_2.Location = new System.Drawing.Point(6, 20);
-            this.chBoxUsingButton_2.Name = "chBoxUsingButton_2";
-            this.chBoxUsingButton_2.Size = new System.Drawing.Size(95, 16);
-            this.chBoxUsingButton_2.TabIndex = 0;
-            this.chBoxUsingButton_2.Text = "Using Button";
-            this.chBoxUsingButton_2.UseVisualStyleBackColor = true;
-            this.chBoxUsingButton_2.CheckedChanged += new System.EventHandler(this.chBoxUsingButton_2_CheckedChanged);
-            // 
-            // btnClearDataOut_2
-            // 
-            this.btnClearDataOut_2.Location = new System.Drawing.Point(6, 64);
-            this.btnClearDataOut_2.Name = "btnClearDataOut_2";
-            this.btnClearDataOut_2.Size = new System.Drawing.Size(104, 39);
-            this.btnClearDataOut_2.TabIndex = 4;
-            this.btnClearDataOut_2.Text = "Clear Data Out";
-            this.btnClearDataOut_2.UseVisualStyleBackColor = true;
-            this.btnClearDataOut_2.Click += new System.EventHandler(this.btnClearDataOut_2_Click);
+            this.groupBox12.Text = "Send Data";
             // 
             // btnSendData_2
             // 
-            this.btnSendData_2.Location = new System.Drawing.Point(6, 20);
+            this.btnSendData_2.Location = new System.Drawing.Point(347, 21);
             this.btnSendData_2.Name = "btnSendData_2";
-            this.btnSendData_2.Size = new System.Drawing.Size(104, 39);
+            this.btnSendData_2.Size = new System.Drawing.Size(70, 20);
             this.btnSendData_2.TabIndex = 2;
-            this.btnSendData_2.Text = "Send Data";
+            this.btnSendData_2.Text = "Send";
             this.btnSendData_2.UseVisualStyleBackColor = true;
             this.btnSendData_2.Click += new System.EventHandler(this.btnSendData_2_Click);
             // 
             // tBoxDataOut_2
             // 
-            this.tBoxDataOut_2.Location = new System.Drawing.Point(6, 20);
+            this.tBoxDataOut_2.Location = new System.Drawing.Point(6, 21);
             this.tBoxDataOut_2.Multiline = true;
             this.tBoxDataOut_2.Name = "tBoxDataOut_2";
-            this.tBoxDataOut_2.Size = new System.Drawing.Size(372, 171);
+            this.tBoxDataOut_2.Size = new System.Drawing.Size(335, 20);
             this.tBoxDataOut_2.TabIndex = 3;
-            this.tBoxDataOut_2.TextChanged += new System.EventHandler(this.tBoxDataOut_2_TextChanged);
-            this.tBoxDataOut_2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tBoxDataOut_KeyDown);
+            //this.tBoxDataOut_2.TextChanged += new System.EventHandler(this.tBoxDataOut_2_TextChanged);
+            //this.tBoxDataOut_2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tBoxDataOut_KeyDown);
             // 
             // groupBox17
             // 
@@ -815,27 +495,27 @@ namespace SerialStudying
             this.groupBox17.Controls.Add(this.progressBar1_2);
             this.groupBox17.Controls.Add(this.btnClose_2);
             this.groupBox17.Controls.Add(this.btnOpen_2);
-            this.groupBox17.Location = new System.Drawing.Point(6, 217);
+            this.groupBox17.Location = new System.Drawing.Point(239, 20);
             this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(227, 197);
+            this.groupBox17.Size = new System.Drawing.Size(192, 162);
             this.groupBox17.TabIndex = 1;
             this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "COM Port Status";
             // 
             // groupBox18
             // 
             this.groupBox18.Controls.Add(this.lblStatusCom_2);
             this.groupBox18.Location = new System.Drawing.Point(81, 20);
             this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Size = new System.Drawing.Size(140, 132);
+            this.groupBox18.Size = new System.Drawing.Size(103, 105);
             this.groupBox18.TabIndex = 5;
             this.groupBox18.TabStop = false;
-            this.groupBox18.Text = "COM PORT STATUS";
             // 
             // lblStatusCom_2
             // 
             this.lblStatusCom_2.AutoSize = true;
             this.lblStatusCom_2.Font = new System.Drawing.Font("Britannic Bold", 18F);
-            this.lblStatusCom_2.Location = new System.Drawing.Point(45, 56);
+            this.lblStatusCom_2.Location = new System.Drawing.Point(26, 40);
             this.lblStatusCom_2.Name = "lblStatusCom_2";
             this.lblStatusCom_2.Size = new System.Drawing.Size(52, 27);
             this.lblStatusCom_2.TabIndex = 3;
@@ -843,16 +523,16 @@ namespace SerialStudying
             // 
             // progressBar1_2
             // 
-            this.progressBar1_2.Location = new System.Drawing.Point(6, 168);
+            this.progressBar1_2.Location = new System.Drawing.Point(6, 131);
             this.progressBar1_2.Name = "progressBar1_2";
-            this.progressBar1_2.Size = new System.Drawing.Size(215, 23);
+            this.progressBar1_2.Size = new System.Drawing.Size(178, 20);
             this.progressBar1_2.TabIndex = 2;
             // 
             // btnClose_2
             // 
-            this.btnClose_2.Location = new System.Drawing.Point(6, 91);
+            this.btnClose_2.Location = new System.Drawing.Point(6, 78);
             this.btnClose_2.Name = "btnClose_2";
-            this.btnClose_2.Size = new System.Drawing.Size(69, 61);
+            this.btnClose_2.Size = new System.Drawing.Size(69, 47);
             this.btnClose_2.TabIndex = 1;
             this.btnClose_2.Text = "Close";
             this.btnClose_2.UseVisualStyleBackColor = true;
@@ -860,9 +540,9 @@ namespace SerialStudying
             // 
             // btnOpen_2
             // 
-            this.btnOpen_2.Location = new System.Drawing.Point(6, 20);
+            this.btnOpen_2.Location = new System.Drawing.Point(6, 26);
             this.btnOpen_2.Name = "btnOpen_2";
-            this.btnOpen_2.Size = new System.Drawing.Size(69, 61);
+            this.btnOpen_2.Size = new System.Drawing.Size(69, 46);
             this.btnOpen_2.TabIndex = 0;
             this.btnOpen_2.Text = "Open";
             this.btnOpen_2.UseVisualStyleBackColor = true;
@@ -872,7 +552,7 @@ namespace SerialStudying
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1307, 448);
+            this.ClientSize = new System.Drawing.Size(465, 530);
             this.Controls.Add(this.groupBox10);
             this.Controls.Add(this.groupBox9);
             this.Name = "Form1";
@@ -885,26 +565,12 @@ namespace SerialStudying
             this.groupBox8.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
-            this.groupBox13.ResumeLayout(false);
-            this.groupBox13.PerformLayout();
-            this.groupBox14.ResumeLayout(false);
-            this.groupBox15.ResumeLayout(false);
-            this.groupBox15.PerformLayout();
-            this.groupBox16.ResumeLayout(false);
-            this.groupBox16.PerformLayout();
             this.groupBox17.ResumeLayout(false);
             this.groupBox18.ResumeLayout(false);
             this.groupBox18.PerformLayout();
@@ -932,27 +598,12 @@ namespace SerialStudying
         private System.Windows.Forms.Button btnSendData;
         private System.Windows.Forms.TextBox tBoxDataOut;
         private System.IO.Ports.SerialPort serialPort1;
-        private System.Windows.Forms.CheckBox chBoxRTSEnable;
-        private System.Windows.Forms.CheckBox chBoxDTREnable;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btnClearDataOut;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.CheckBox chBoxUsingEnter;
-        private System.Windows.Forms.CheckBox chBoxUsingButton;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.Label lblDataOutLength;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.CheckBox chBoxWrite;
-        private System.Windows.Forms.CheckBox chBoxWriteLine;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Label lblStatusCom;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.CheckBox chBoxRTSEnable_2;
-        private System.Windows.Forms.CheckBox chBoxDTREnable_2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
@@ -964,17 +615,6 @@ namespace SerialStudying
         private System.Windows.Forms.ComboBox cBoxBaudRate_2;
         private System.Windows.Forms.ComboBox cBoxComport_2;
         private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.Label lblDataOutLength_2;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.GroupBox groupBox14;
-        private System.Windows.Forms.GroupBox groupBox15;
-        private System.Windows.Forms.CheckBox chBoxWrite_2;
-        private System.Windows.Forms.CheckBox chBoxWriteLine_2;
-        private System.Windows.Forms.GroupBox groupBox16;
-        private System.Windows.Forms.CheckBox chBoxUsingEnter_2;
-        private System.Windows.Forms.CheckBox chBoxUsingButton_2;
-        private System.Windows.Forms.Button btnClearDataOut_2;
         private System.Windows.Forms.Button btnSendData_2;
         private System.Windows.Forms.TextBox tBoxDataOut_2;
         private System.Windows.Forms.GroupBox groupBox17;

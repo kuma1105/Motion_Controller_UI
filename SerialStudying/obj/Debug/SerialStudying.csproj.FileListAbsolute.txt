@@ -8,3 +8,13 @@ D:\SerialStudying\SerialStudying\obj\Debug\SerialStudying.csproj.GenerateResourc
 D:\SerialStudying\SerialStudying\obj\Debug\SerialStudying.csproj.CoreCompileInputs.cache
 D:\SerialStudying\SerialStudying\obj\Debug\SerialStudying.exe
 D:\SerialStudying\SerialStudying\obj\Debug\SerialStudying.pdb
+C:\Users\jshkr\OneDrive - koreatech.ac.kr\04_StretchTest_ComFormat\SerialStudying\SerialStudying\obj\Debug\SerialStudying.csproj.AssemblyReference.cache
+C:\Users\jshkr\OneDrive - koreatech.ac.kr\04_StretchTest_ComFormat\SerialStudying\SerialStudying\obj\Debug\SerialStudying.Form1.resources
+C:\Users\jshkr\OneDrive - koreatech.ac.kr\04_StretchTest_ComFormat\SerialStudying\SerialStudying\obj\Debug\SerialStudying.Properties.Resources.resources
+C:\Users\jshkr\OneDrive - koreatech.ac.kr\04_StretchTest_ComFormat\SerialStudying\SerialStudying\obj\Debug\SerialStudying.csproj.GenerateResource.cache
+C:\Users\jshkr\OneDrive - koreatech.ac.kr\04_StretchTest_ComFormat\SerialStudying\SerialStudying\obj\Debug\SerialStudying.csproj.CoreCompileInputs.cache
+C:\Users\jshkr\OneDrive - koreatech.ac.kr\04_StretchTest_ComFormat\SerialStudying\SerialStudying\obj\Debug\SerialStudying.exe
+C:\Users\jshkr\OneDrive - koreatech.ac.kr\04_StretchTest_ComFormat\SerialStudying\SerialStudying\obj\Debug\SerialStudying.pdb
+C:\Users\jshkr\OneDrive - koreatech.ac.kr\04_StretchTest_ComFormat\SerialStudying\SerialStudying\bin\Debug\SerialStudying.exe.config
+C:\Users\jshkr\OneDrive - koreatech.ac.kr\04_StretchTest_ComFormat\SerialStudying\SerialStudying\bin\Debug\SerialStudying.exe
+C:\Users\jshkr\OneDrive - koreatech.ac.kr\04_StretchTest_ComFormat\SerialStudying\SerialStudying\bin\Debug\SerialStudying.pdb
