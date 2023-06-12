@@ -36,14 +36,18 @@ namespace SerialStudying
 
             // For initialize condition
             //chBoxDTREnable.Checked = false; // DTR 상태 초기화
-            serialPort1.DtrEnable = false;
+            //serialPort1.DtrEnable = false;
             //chBoxRTSEnable.Checked = false; // RTS 상태 초기화
-            serialPort1.RtsEnable = false;
-            btnSendData.Enabled = false;    // 데이터 전송 버튼 활성화, 비활성화
+            //serialPort1.RtsEnable = false;
+            btnSendData.Enabled = true;    // 데이터 전송 버튼 활성화, 비활성화
             //chBoxWriteLine.Checked = false;
             //chBoxWrite.Checked = true;
             //sendWith = "Write";
 
+            chBoxAddToOldData1.Checked = true;
+            chBoxAlwaysUpdate1.Checked = false;
+            chBoxAddToOldData2.Checked = true;
+            chBoxAlwaysUpdate2.Checked = false;
 
             // 2
             cBoxComport_2.Items.AddRange(ports);
@@ -53,14 +57,20 @@ namespace SerialStudying
 
             // For initialize condition
             //chBoxDTREnable_2.Checked = false; // DTR 상태 초기화
-            serialPort2.DtrEnable = false;
+            //serialPort2.DtrEnable = false;
             //chBoxRTSEnable_2.Checked = false; // RTS 상태 초기화
-            serialPort2.RtsEnable = false;
-            btnSendData_2.Enabled = false;    // 
+            //serialPort2.RtsEnable = false;
+            btnSendData_2.Enabled = true;    // 
             //chBoxWriteLine_2.Checked = false;
             //chBoxWrite_2.Checked = true;
             //sendWith_2 = "Write";
         }
+
+
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    MessageBox.Show("hello world!");
+        //}
 
 
         /// <summary>
@@ -68,6 +78,8 @@ namespace SerialStudying
         /// </summary>
         string dataOUT; // 전송할 데이터가 담긴 변수
         //string sendWith; // "WriteLine" or "Write"
+        string dataIN1; // 전송받은 데이터가 담길 변수
+        string dataIN2; // 전송받은 데이터가 담길 변수
 
         // 'Open' 버튼을 클릭하면 상태막대를 100으로 설정하고 시리얼 포트를 엽니다
         private void btnOpen_Click(object sender, EventArgs e)
@@ -130,10 +142,53 @@ namespace SerialStudying
             }
         }
 
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    MessageBox.Show("hello world!");
-        //}
+        // 시리얼 포트로 받은 데이터를 읽어서 textBox에 보여준다.
+        private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            dataIN1 = serialPort1.ReadExisting();
+            this.Invoke(new EventHandler(ShowData1)); // 이 메소드를 사용하지 않으면 전송받은 데이터를 볼 수 없다.
+        }
+
+        private void ShowData1(object sender, EventArgs e)
+        {
+            // 새로운 데이터를 보여주기 or 기 존재하는 데이터에 추가하기
+            if (chBoxAlwaysUpdate1.Checked)
+            {
+                tBoxDataIN1.Text = dataIN1;
+            }
+            else if (chBoxAddToOldData1.Checked)
+            {
+                tBoxDataIN1.Text += dataIN1;
+            }
+        }
+        private void chBoxAlwaysUpdate1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chBoxAlwaysUpdate1.Checked)
+            {
+                // toggle
+                chBoxAlwaysUpdate1.Checked = true;
+                chBoxAddToOldData1.Checked = false;
+            }
+            else
+            {
+                chBoxAddToOldData1.Checked = true;
+            }
+        }
+
+        private void chBoxAddToOldData1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chBoxAddToOldData1.Checked)
+            {
+                // toggle
+                chBoxAlwaysUpdate1.Checked = false;
+                chBoxAddToOldData1.Checked = true;
+            }
+            else
+            {
+                chBoxAlwaysUpdate1.Checked = true;
+            }
+        }
+
 
         // Data Terminal Ready
         //private void chBoxDTREnable_CheckedChanged(object sender, EventArgs e)
@@ -310,6 +365,62 @@ namespace SerialStudying
             }
         }
 
+        private void btnClearDataIN1_Click(object sender, EventArgs e)
+        {
+            if (tBoxDataIN1.Text != "")
+            {
+                tBoxDataIN1.Text = "";
+            }
+        }
+
+        // 시리얼 포트로 받은 데이터를 읽어서 textBox에 보여준다.
+        private void serialPort2_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            dataIN2 = serialPort2.ReadExisting();
+            this.Invoke(new EventHandler(ShowData2)); // 이 메소드를 사용하지 않으면 전송받은 데이터를 볼 수 없다.
+        }
+
+        private void ShowData2(object sender, EventArgs e)
+        {
+            // 새로운 데이터를 보여주기 or 기 존재하는 데이터에 추가하기
+            if (chBoxAlwaysUpdate2.Checked)
+            {
+                tBoxDataIN2.Text = dataIN2;
+            }
+            else if (chBoxAddToOldData2.Checked)
+            {
+                tBoxDataIN2.Text += dataIN2;
+            }
+        }
+
+        private void chBoxAlwaysUpdate2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chBoxAlwaysUpdate2.Checked)
+            {
+                // toggle
+                chBoxAlwaysUpdate2.Checked = true;
+                chBoxAddToOldData2.Checked = false;
+            }
+            else
+            {
+                chBoxAddToOldData2.Checked = true;
+            }
+        }
+
+        private void chBoxAddToOldData2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chBoxAddToOldData2.Checked)
+            {
+                // toggle
+                chBoxAlwaysUpdate2.Checked = false;
+                chBoxAddToOldData2.Checked = true;
+            }
+            else
+            {
+                chBoxAlwaysUpdate2.Checked = true;
+            }
+        }
+
         // Data Terminal Ready
         //private void chBoxDTREnable_2_CheckedChanged(object sender, EventArgs e)
         //{
@@ -415,3 +526,4 @@ namespace SerialStudying
         //}
     }
 }
+

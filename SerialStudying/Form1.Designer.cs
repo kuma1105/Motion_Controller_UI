@@ -52,7 +52,12 @@ namespace SerialStudying
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.chBoxAddToOldData1 = new System.Windows.Forms.CheckBox();
+            this.chBoxAlwaysUpdate1 = new System.Windows.Forms.CheckBox();
+            this.btnClearDataIN1 = new System.Windows.Forms.Button();
+            this.tBoxDataIN1 = new System.Windows.Forms.RichTextBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.chBoxAddToOldData2 = new System.Windows.Forms.CheckBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -67,12 +72,15 @@ namespace SerialStudying
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.btnSendData_2 = new System.Windows.Forms.Button();
             this.tBoxDataOut_2 = new System.Windows.Forms.TextBox();
+            this.chBoxAlwaysUpdate2 = new System.Windows.Forms.CheckBox();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
             this.lblStatusCom_2 = new System.Windows.Forms.Label();
             this.progressBar1_2 = new System.Windows.Forms.ProgressBar();
             this.btnClose_2 = new System.Windows.Forms.Button();
             this.btnOpen_2 = new System.Windows.Forms.Button();
+            this.btnClearDataIN2 = new System.Windows.Forms.Button();
+            this.tBoxDataIN2 = new System.Windows.Forms.RichTextBox();
             this.serialPort2 = new System.IO.Ports.SerialPort(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -291,8 +299,10 @@ namespace SerialStudying
             this.tBoxDataOut.Name = "tBoxDataOut";
             this.tBoxDataOut.Size = new System.Drawing.Size(335, 20);
             this.tBoxDataOut.TabIndex = 3;
-            //this.tBoxDataOut.TextChanged += new System.EventHandler(this.tBoxDataOut_TextChanged);
-            //this.tBoxDataOut.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tBoxDataOut_KeyDown);
+            // 
+            // serialPort1
+            // 
+            this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
             // groupBox3
             // 
@@ -307,27 +317,86 @@ namespace SerialStudying
             // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.chBoxAddToOldData1);
+            this.groupBox9.Controls.Add(this.chBoxAlwaysUpdate1);
+            this.groupBox9.Controls.Add(this.btnClearDataIN1);
+            this.groupBox9.Controls.Add(this.tBoxDataIN1);
             this.groupBox9.Controls.Add(this.groupBox1);
             this.groupBox9.Controls.Add(this.groupBox3);
             this.groupBox9.Controls.Add(this.groupBox2);
             this.groupBox9.Location = new System.Drawing.Point(12, 12);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(439, 249);
+            this.groupBox9.Size = new System.Drawing.Size(753, 249);
             this.groupBox9.TabIndex = 5;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "1";
             // 
+            // chBoxAddToOldData1
+            // 
+            this.chBoxAddToOldData1.AutoSize = true;
+            this.chBoxAddToOldData1.Location = new System.Drawing.Point(552, 222);
+            this.chBoxAddToOldData1.Name = "chBoxAddToOldData1";
+            this.chBoxAddToOldData1.Size = new System.Drawing.Size(112, 16);
+            this.chBoxAddToOldData1.TabIndex = 9;
+            this.chBoxAddToOldData1.Text = "Add to Old Data";
+            this.chBoxAddToOldData1.UseVisualStyleBackColor = true;
+            this.chBoxAddToOldData1.CheckedChanged += new System.EventHandler(this.chBoxAddToOldData1_CheckedChanged);
+            // 
+            // chBoxAlwaysUpdate1
+            // 
+            this.chBoxAlwaysUpdate1.AutoSize = true;
+            this.chBoxAlwaysUpdate1.Location = new System.Drawing.Point(437, 222);
+            this.chBoxAlwaysUpdate1.Name = "chBoxAlwaysUpdate1";
+            this.chBoxAlwaysUpdate1.Size = new System.Drawing.Size(109, 16);
+            this.chBoxAlwaysUpdate1.TabIndex = 9;
+            this.chBoxAlwaysUpdate1.Text = "Always Update";
+            this.chBoxAlwaysUpdate1.UseVisualStyleBackColor = true;
+            this.chBoxAlwaysUpdate1.CheckedChanged += new System.EventHandler(this.chBoxAlwaysUpdate1_CheckedChanged);
+            // 
+            // btnClearDataIN1
+            // 
+            this.btnClearDataIN1.Location = new System.Drawing.Point(670, 219);
+            this.btnClearDataIN1.Name = "btnClearDataIN1";
+            this.btnClearDataIN1.Size = new System.Drawing.Size(75, 20);
+            this.btnClearDataIN1.TabIndex = 8;
+            this.btnClearDataIN1.Text = "clear";
+            this.btnClearDataIN1.UseVisualStyleBackColor = true;
+            this.btnClearDataIN1.Click += new System.EventHandler(this.btnClearDataIN1_Click);
+            // 
+            // tBoxDataIN1
+            // 
+            this.tBoxDataIN1.Location = new System.Drawing.Point(437, 20);
+            this.tBoxDataIN1.Name = "tBoxDataIN1";
+            this.tBoxDataIN1.Size = new System.Drawing.Size(309, 196);
+            this.tBoxDataIN1.TabIndex = 7;
+            this.tBoxDataIN1.Text = "";
+            // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.chBoxAddToOldData2);
             this.groupBox10.Controls.Add(this.groupBox11);
             this.groupBox10.Controls.Add(this.groupBox12);
+            this.groupBox10.Controls.Add(this.chBoxAlwaysUpdate2);
             this.groupBox10.Controls.Add(this.groupBox17);
+            this.groupBox10.Controls.Add(this.btnClearDataIN2);
+            this.groupBox10.Controls.Add(this.tBoxDataIN2);
             this.groupBox10.Location = new System.Drawing.Point(12, 267);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(439, 250);
+            this.groupBox10.Size = new System.Drawing.Size(753, 250);
             this.groupBox10.TabIndex = 5;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "2";
+            // 
+            // chBoxAddToOldData2
+            // 
+            this.chBoxAddToOldData2.AutoSize = true;
+            this.chBoxAddToOldData2.Location = new System.Drawing.Point(552, 222);
+            this.chBoxAddToOldData2.Name = "chBoxAddToOldData2";
+            this.chBoxAddToOldData2.Size = new System.Drawing.Size(112, 16);
+            this.chBoxAddToOldData2.TabIndex = 9;
+            this.chBoxAddToOldData2.Text = "Add to Old Data";
+            this.chBoxAddToOldData2.UseVisualStyleBackColor = true;
+            this.chBoxAddToOldData2.CheckedChanged += new System.EventHandler(this.chBoxAddToOldData2_CheckedChanged);
             // 
             // groupBox11
             // 
@@ -486,8 +555,17 @@ namespace SerialStudying
             this.tBoxDataOut_2.Name = "tBoxDataOut_2";
             this.tBoxDataOut_2.Size = new System.Drawing.Size(335, 20);
             this.tBoxDataOut_2.TabIndex = 3;
-            //this.tBoxDataOut_2.TextChanged += new System.EventHandler(this.tBoxDataOut_2_TextChanged);
-            //this.tBoxDataOut_2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tBoxDataOut_KeyDown);
+            // 
+            // chBoxAlwaysUpdate2
+            // 
+            this.chBoxAlwaysUpdate2.AutoSize = true;
+            this.chBoxAlwaysUpdate2.Location = new System.Drawing.Point(437, 222);
+            this.chBoxAlwaysUpdate2.Name = "chBoxAlwaysUpdate2";
+            this.chBoxAlwaysUpdate2.Size = new System.Drawing.Size(109, 16);
+            this.chBoxAlwaysUpdate2.TabIndex = 9;
+            this.chBoxAlwaysUpdate2.Text = "Always Update";
+            this.chBoxAlwaysUpdate2.UseVisualStyleBackColor = true;
+            this.chBoxAlwaysUpdate2.CheckedChanged += new System.EventHandler(this.chBoxAlwaysUpdate2_CheckedChanged);
             // 
             // groupBox17
             // 
@@ -548,11 +626,33 @@ namespace SerialStudying
             this.btnOpen_2.UseVisualStyleBackColor = true;
             this.btnOpen_2.Click += new System.EventHandler(this.btnOpen_2_Click);
             // 
+            // btnClearDataIN2
+            // 
+            this.btnClearDataIN2.Location = new System.Drawing.Point(670, 219);
+            this.btnClearDataIN2.Name = "btnClearDataIN2";
+            this.btnClearDataIN2.Size = new System.Drawing.Size(75, 20);
+            this.btnClearDataIN2.TabIndex = 8;
+            this.btnClearDataIN2.Text = "clear";
+            this.btnClearDataIN2.UseVisualStyleBackColor = true;
+            this.btnClearDataIN2.Click += new System.EventHandler(this.btnClearDataIN1_Click);
+            // 
+            // tBoxDataIN2
+            // 
+            this.tBoxDataIN2.Location = new System.Drawing.Point(437, 20);
+            this.tBoxDataIN2.Name = "tBoxDataIN2";
+            this.tBoxDataIN2.Size = new System.Drawing.Size(309, 196);
+            this.tBoxDataIN2.TabIndex = 7;
+            this.tBoxDataIN2.Text = "";
+            // 
+            // serialPort2
+            // 
+            this.serialPort2.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort2_DataReceived);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(465, 530);
+            this.ClientSize = new System.Drawing.Size(780, 530);
             this.Controls.Add(this.groupBox10);
             this.Controls.Add(this.groupBox9);
             this.Name = "Form1";
@@ -566,7 +666,9 @@ namespace SerialStudying
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
             this.groupBox12.ResumeLayout(false);
@@ -624,6 +726,14 @@ namespace SerialStudying
         private System.Windows.Forms.Button btnClose_2;
         private System.Windows.Forms.Button btnOpen_2;
         private System.IO.Ports.SerialPort serialPort2;
+        private System.Windows.Forms.Button btnClearDataIN1;
+        private System.Windows.Forms.RichTextBox tBoxDataIN1;
+        private System.Windows.Forms.CheckBox chBoxAddToOldData1;
+        private System.Windows.Forms.CheckBox chBoxAlwaysUpdate1;
+        private System.Windows.Forms.CheckBox chBoxAddToOldData2;
+        private System.Windows.Forms.CheckBox chBoxAlwaysUpdate2;
+        private System.Windows.Forms.Button btnClearDataIN2;
+        private System.Windows.Forms.RichTextBox tBoxDataIN2;
     }
 }
 
